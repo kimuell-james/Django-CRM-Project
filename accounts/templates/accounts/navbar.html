@@ -1,5 +1,13 @@
 {% load static %}
 
+<style>
+    .hello-user {
+        font-size: 18px;
+        color: #fff;
+        margin-right: 20px;
+    }
+</style>
+
 <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
     <div class="container-fluid">
         <img src="{% static '/images/logo.png' %}" alt="">
@@ -18,4 +26,6 @@
             </ul>
         </div>
     </div>
+    <span class="hello-user">Hello, {{request.user}}</span>
+    <span><a class="hello-user" href="{% url 'logout' %}">Logout</a></span>
 </nav>
